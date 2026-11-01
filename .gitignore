@@ -1,0 +1,14 @@
+# Local page captures, extracted content, fonts and browser state
+.DS_Store
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.ttf
+*.otf
+*.woff*
+research/
+node_modules/
+.env*
+*browser-installations*
+*font-installation*

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Feishu Quiet Theme",
+  "version": "1.4.0",
+  "description": "Unified Feishu Docs typography, native TOC styling and local whiteboard font rendering.",
+  "content_scripts": [{
+    "matches": ["https://your-tenant.larkoffice.com/docx/*", "https://your-tenant.larkoffice.com/wiki/*"],
+    "css": ["theme.css"],
+    "run_at": "document_start"
+  }, {
+    "matches": ["https://your-tenant.larkoffice.com/docx/*", "https://your-tenant.larkoffice.com/wiki/*"],
+    "js": ["board-font.js"],
+    "world": "MAIN",
+    "run_at": "document_start"
+  }]
+}

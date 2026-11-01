@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Feishu Quiet Theme",
+  "version": "1.3.0",
+  "description": "Typography and native TOC styling for Feishu Docs. CSS only.",
+  "content_scripts": [{
+    "matches": ["https://your-tenant.larkoffice.com/docx/*", "https://your-tenant.larkoffice.com/wiki/*"],
+    "css": ["theme.css"],
+    "run_at": "document_start"
+  }]
+}

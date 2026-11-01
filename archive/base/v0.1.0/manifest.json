@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Feishu Quiet Base",
+  "version": "0.1.0",
+  "description": "Compact native Feishu Base navigation and local grid typography.",
+  "content_scripts": [{
+    "matches": ["https://your-tenant.larkoffice.com/base/*", "https://your-tenant.larkoffice.com/wiki/*"],
+    "css": ["theme.css"],
+    "run_at": "document_start"
+  }, {
+    "matches": ["https://your-tenant.larkoffice.com/base/*", "https://your-tenant.larkoffice.com/wiki/*"],
+    "js": ["grid-font.js"],
+    "world": "MAIN",
+    "run_at": "document_start"
+  }]
+}

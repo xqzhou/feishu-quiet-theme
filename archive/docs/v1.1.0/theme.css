@@ -1,0 +1,178 @@
+/* Feishu Quiet Theme v1.1.0 — compact editorial typography.
+ * Keep editor nodes, virtual scrolling, comments, controls and authored colors.
+ * Do not change page width/margins: Feishu positions comments from that layout.
+ */
+.ccm-scope .garr-container-docx {
+  --lqt-font: "Avenir Next", "PingFang SC", -apple-system, "Microsoft YaHei", sans-serif;
+  --lqt-mono: "Source Code Pro", "SFMono-Regular", Consolas, monospace;
+  --lqt-paper: #ffffff;
+  --lqt-ink: #242424;
+  --lqt-muted: #808080;
+  --lqt-accent: #242424;
+  --lqt-hover: #f7f7f7;
+  --lqt-rule: #e9e9e9;
+  --lqt-size: 17px;
+  --lqt-leading: 1.65;
+}
+html[data-theme="dark"] .ccm-scope .garr-container-docx {
+  --lqt-paper: #191919;
+  --lqt-ink: #e7e7e7;
+  --lqt-muted: #a0a0a0;
+  --lqt-accent: #e7e7e7;
+  --lqt-hover: #242424;
+  --lqt-rule: #343434;
+}
+.ccm-scope .garr-container-docx .bear-web-x-container {
+  background-color: var(--lqt-paper) !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block {
+  font-family: var(--lqt-font) !important;
+  color: var(--lqt-ink);
+}
+/* Set inherited defaults, leaving explicit inline author formatting intact. */
+.ccm-scope .garr-container-docx .docx-page-block :is(.text-editor, .ace-line) {
+  font-family: var(--lqt-font) !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.docx-text-block, .docx-bullet-block, .docx-ordered-block, .docx-todo-block) .text-editor {
+  font-size: var(--lqt-size) !important;
+  line-height: var(--lqt-leading) !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.docx-text-block, .docx-bullet-block, .docx-ordered-block, .docx-todo-block) .ace-line {
+  line-height: inherit !important;
+}
+/* Internal padding is measured with each block by the virtualized editor. */
+.ccm-scope .garr-container-docx .docx-text-block > .text-block-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.bullet-list, .ordered-list, .todo-list) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ccm-scope .garr-container-docx .docx-page-block .bullet {
+  line-height: calc(var(--lqt-size) * var(--lqt-leading)) !important;
+}
+.ccm-scope .garr-container-docx .page-block-header .page-block-content {
+  font-family: var(--lqt-font) !important;
+  font-size: 32px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading {
+  font-family: var(--lqt-font) !important;
+  letter-spacing: -0.01em;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading-h1 {
+  font-size: 27px !important;
+  line-height: 1.4 !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading-h2 {
+  font-size: 23px !important;
+  line-height: 1.4 !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading-h3 {
+  font-size: 20px !important;
+  line-height: 1.4 !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.heading-h4, .heading-h5, .heading-h6, .heading-h7, .heading-h8, .heading-h9) {
+  font-size: 17px !important;
+  line-height: 1.5 !important;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.heading-h1, .heading-h2) {
+  padding-top: 4px;
+  padding-bottom: 2px;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading-h3 {
+  padding-top: 3px;
+  padding-bottom: 1px;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.heading-h4, .heading-h5, .heading-h6) {
+  padding-top: 2px;
+  padding-bottom: 0;
+}
+.ccm-scope .garr-container-docx .docx-page-block .heading .text-editor,
+.ccm-scope .garr-container-docx .docx-page-block .heading .ace-line {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+.ccm-scope .garr-container-docx .catalogue {
+  font-family: var(--lqt-font) !important;
+}
+/* Preserve native TOC row heights, indentation, folding and active tracking. */
+.ccm-scope .garr-container-docx .catalogue__list {
+  box-shadow: inset 1px 0 var(--lqt-rule);
+}
+.ccm-scope .garr-container-docx .catalogue__item-title {
+  font-size: 13px !important;
+  font-family: var(--lqt-font) !important;
+  font-weight: 400 !important;
+  color: var(--lqt-muted) !important;
+  border-radius: 0;
+  text-decoration: none !important;
+}
+.ccm-scope .garr-container-docx .catalogue__item-title .text {
+  color: inherit !important;
+  font-weight: inherit !important;
+}
+.ccm-scope .garr-container-docx .catalogue__list-item.heading-0 > .catalogue__item-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--lqt-ink) !important;
+}
+.ccm-scope .garr-container-docx .catalogue__list-item:is(.heading-1, .heading-2) > .catalogue__item-title {
+  font-weight: 500 !important;
+  color: var(--lqt-ink) !important;
+}
+.ccm-scope .garr-container-docx .catalogue__item-title:hover {
+  background-color: var(--lqt-hover) !important;
+}
+.ccm-scope .garr-container-docx .catalogue__list-item.active > .catalogue__item-title {
+  color: var(--lqt-accent) !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.ccm-scope .garr-container-docx .catalogue__list-item.active {
+  box-shadow: inset 2px 0 var(--lqt-accent);
+}
+.ccm-scope .garr-container-docx .catalogue__item-title:focus-visible {
+  outline: 2px solid var(--lqt-accent);
+  outline-offset: 2px;
+}
+/* No broad span/color overrides: preserve syntax colors, highlights and comments. */
+.ccm-scope .garr-container-docx .docx-page-block a.link {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.ccm-scope .garr-container-docx .docx-page-block .inline-code {
+  font-family: var(--lqt-mono) !important;
+  font-size: 0.88em !important;
+  border-radius: 3px;
+}
+.ccm-scope .garr-container-docx .docx-page-block :is(.docx-code-block, .code-block) .text-editor,
+.ccm-scope .garr-container-docx .docx-page-block :is(.docx-code-block, .code-block) .ace-line {
+  font-family: var(--lqt-mono) !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+}
+/* Table geometry, cell backgrounds, column resizing and authored emphasis survive. */
+.ccm-scope .garr-container-docx .docx-table-block :is(.docx-text-block, .docx-bullet-block, .docx-ordered-block) .text-editor {
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+}
+.ccm-scope .garr-container-docx .docx-table-block .docx-text-block > .text-block-wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ccm-scope .garr-container-docx .docx-table-block :is(.bullet-list, .ordered-list, .todo-list) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .ccm-scope .garr-container-docx { --lqt-size: 16px; --lqt-leading: 1.65; }
+  .ccm-scope .garr-container-docx .page-block-header .page-block-content { font-size: 28px !important; }
+}
+@media print {
+  .ccm-scope .garr-container-docx .bear-web-x-container { background-color: transparent !important; }
+}

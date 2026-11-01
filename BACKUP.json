@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-01",
+  "versions": {
+    "docs": "1.4.0",
+    "base": "0.2.0"
+  },
+  "files": {
+    ".gitignore": "bd43dc243a40daa116464201894456ee5e11ba99035dba36decd1321b211b622",
+    "CHANGELOG.md": "b0e7c27fca635a96af54b0bc1a564577d1188a57e2d784f530165cb209a45867",
+    "README.md": "36114918a4db76aacf8d239f0b764dfae43ee5db37e5b7c7079c2ed515c658a4",
+    "archive/base/v0.1.0/grid-font.js": "31c7a4cbeaae7f8b3c328cddc44e1de5805a3b4cb18f2d123f86cd9543d63bc9",
+    "archive/base/v0.1.0/manifest.json": "aa00b1c18fd4da58c960396e67e06bfc6ba695821bf9d5cbc09efddab977a539",
+    "archive/base/v0.1.0/theme.css": "876a704a1e725319191f4bb2e9dcee7d8c95d49794c060b3ad1fee59a97db970",
+    "archive/docs/v1.0.0/theme.css": "911ba0eaf810dc048107240949f9a198c3c96ddba7ab973535cc65890658b9e3",
+    "archive/docs/v1.1.0/manifest.json": "c046d6f95e478efe26fbce1f80b931f7b7c479b954573bef7e4afda6064b1dfb",
+    "archive/docs/v1.1.0/theme.css": "99130bd543d47e59369a98273472d9d9114f51c7c9111d3b6e564c1472e2d788",
+    "archive/docs/v1.2.0/manifest.json": "1fbfcf2b3a0f87cf37726afe20b30d78e7c2eaa5d1a8c0c9cf99e7c42171fb40",
+    "archive/docs/v1.2.0/theme.css": "96d1b9fae37de5ad941ace77d6c6675e6328785d6baef9ed0d9037063c0feb0c",
+    "archive/docs/v1.3.0/manifest.json": "a3aa3aaeeb6f5b963f35b80909b40f5b20c047ef1db6ac4d50c77a297560f1a7",
+    "archive/docs/v1.3.0/theme.css": "159ff50e232a89ac117d4b23aca61a9a5c1138a68f56a6c9c9958e56d81b200b",
+    "base/README.md": "4c0f8af89bf2b1e119dfe3c5721aaa545d8b1bc899396648b44f0c186acf02e6",
+    "base/grid-font.js": "cfdc536c23ebb92943dc6baf265f7cce568c1addcde018411a360a54df23c2e2",
+    "base/grid-font.test.cjs": "72d9fdf8264dd6b9ca570fe63aa4802b2fdc185e6d45dd818ca8bef3792ccba2",
+    "base/manifest.json": "bcedf1a02f96a3efb22fa5cd7f5af10cbc0640556b05eb9810f464fcdbedcac6",
+    "base/theme.css": "f23d7278da91bc1e0d4f4b6c581904edb4eec6a9a690aa43305b67f894d370bc",
+    "docs/README.md": "8f5aef84a3e5ceaff0a2845e6639c5df472e5e15f3a7a8dce79a54d2908405d5",
+    "docs/board-font.js": "46a1c4169c09fcbd9c01c23212f18d38830fbff639c4949f9f49133983101e95",
+    "docs/board-font.test.cjs": "f9add04841d74f29b5cd4a43544dadbb8c6d16283267124a8be7f5cdb72c38d4",
+    "docs/manifest.json": "7cbea2f67fbc45a7e0362f4a0457e6c3d7b30a2af8745e28752693a86ed6b1db",
+    "docs/theme.css": "0bef909be062b84915382d79d2a76dfeb14b7d2e4d913dd3288687320c4c3882"
+  },
+  "snapshot": "public"
+}

@@ -1,0 +1,137 @@
+/* Feishu Quiet Base 0.2.0 — native layout, local presentation only. */
+.ccm-scope.suite-bitable {
+  --lqb-font: "Cascadia Code", "PingFang SC", -apple-system, sans-serif;
+  --lqb-code: "Source Code Pro", monospace;
+  --lqb-paper: #fff;
+  --lqb-sidebar: #f7f8fa;
+  --lqb-hover: #eceef1;
+  --lqb-active: #e5e8ed;
+  --lqb-ink: #282c34;
+  --lqb-muted: #6d7480;
+  --lqb-line: #e2e5e9;
+}
+html[data-theme="dark"] .ccm-scope.suite-bitable {
+  --lqb-paper: #1d2025;
+  --lqb-sidebar: #202329;
+  --lqb-hover: #2c3037;
+  --lqb-active: #353a43;
+  --lqb-ink: #e5e8ed;
+  --lqb-muted: #a3abb8;
+  --lqb-line: #383e47;
+}
+.ccm-scope.suite-bitable :is(.navigation-bar, .bitable-main-container) {
+  font-family: var(--lqb-font) !important;
+}
+.ccm-scope.suite-bitable .navigation-bar :is(button, input, [class*="title"], [class*="text"], [class*="path"], [class*="name"], [class*="breadcrumb"], [class*="security"], [class*="time"], [class*="label"]),
+.ccm-scope.suite-bitable :is(.bitable-new-table-tab__item-name, .bitable-sidebar-top input, .bitable-view-menu-item__content__text, .bitable-view-menu-all-views-tab__text, .bitable-toolbar-btn__text, .bitable-add-record-toolbar-button__label) {
+  font-family: var(--lqb-font) !important;
+}
+.ccm-scope.suite-bitable :is(.bitable-sidebar-container, .bitable-new-table-tab, .bitable-sidebar-top) {
+  background: var(--lqb-sidebar) !important;
+}
+.ccm-scope.suite-bitable .bitable-sidebar-container {
+  border-right: 1px solid var(--lqb-line) !important;
+  box-sizing: border-box;
+}
+.ccm-scope.suite-bitable .bitable-new-table-tab__item {
+  border-radius: 6px !important;
+  color: var(--lqb-muted);
+}
+.ccm-scope.suite-bitable .bitable-new-table-tab__item:hover {
+  background: var(--lqb-hover) !important;
+}
+.ccm-scope.suite-bitable .bitable-new-table-tab__item-name {
+  font-size: 13px !important;
+  font-weight: 400;
+}
+.ccm-scope.suite-bitable .bitable-new-table-item__active .bitable-new-table-tab__item {
+  background: var(--lqb-active) !important;
+  color: var(--lqb-ink) !important;
+  box-shadow: inset 2px 0 0 var(--lqb-muted);
+}
+.ccm-scope.suite-bitable .bitable-new-table-item__active .bitable-new-table-tab__item-name {
+  color: var(--lqb-ink) !important;
+  font-weight: 600 !important;
+}
+.ccm-scope.suite-bitable .bitable-view-tab-bar {
+  background: var(--lqb-sidebar) !important;
+}
+.ccm-scope.suite-bitable .bitable-view-menu-item__content__text {
+  font-size: 13px !important;
+  color: var(--lqb-muted) !important;
+}
+.ccm-scope.suite-bitable .bitable-view-menu-item--tab-active {
+  background: var(--lqb-paper) !important;
+  box-shadow: inset 0 2px 0 var(--lqb-ink);
+}
+.ccm-scope.suite-bitable .bitable-view-menu-item--tab-active .bitable-view-menu-item__content__text {
+  color: var(--lqb-ink) !important;
+  font-weight: 600 !important;
+}
+.ccm-scope.suite-bitable .bitable-toolbar {
+  background: var(--lqb-paper) !important;
+  box-shadow: inset 0 -1px 0 var(--lqb-line);
+}
+.ccm-scope.suite-bitable :is(.bitable-toolbar-btn__text, .bitable-add-record-toolbar-button__label) {
+  font-size: 12px !important;
+}
+/* Native dimensions, scrolling, focus colors, field colors and Canvas fills stay native. */
+
+/* Record details are portaled outside .bitable-main-container. */
+.ccm-scope.suite-bitable .bitable-record-card-content {
+  font-family: var(--lqb-font) !important;
+  background-color: var(--lqb-paper) !important;
+  color: var(--lqb-ink);
+}
+.ccm-scope.suite-bitable .bitable-drawer-card-wrapper {
+  box-shadow: -1px 0 0 var(--lqb-line), -10px 0 32px #0000000a;
+}
+.ccm-scope.suite-bitable .bitable-card-modal-header-v2-navbar {
+  background: var(--lqb-paper) !important;
+  box-shadow: inset 0 -1px 0 var(--lqb-line);
+}
+.ccm-scope.suite-bitable .bitable-record-card-content :is(
+  .bitable-card-modal-header-v2-title-content,
+  .bitable-card-field-label__name,
+  .bitable-item-view-edit-tab-name,
+  .bitable-record-subscribe-btn-text,
+  .bitable-text-editor-content,
+  .bitable-text-editor-content .ace-line,
+  .bitable-text-editor-content [data-string],
+  .ud__tag__content,
+  .b-select-value-placeholder,
+  .b-select-option,
+  button, input, textarea
+) {
+  font-family: var(--lqb-font) !important;
+}
+.ccm-scope.suite-bitable .bitable-card-modal-header-v2-title-content {
+  font-size: 22px !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+  color: var(--lqb-ink) !important;
+}
+.ccm-scope.suite-bitable .bitable-card-field-label__name {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 20px !important;
+  color: var(--lqb-muted) !important;
+}
+.ccm-scope.suite-bitable .bitable-record-card-content :is(.bitable-text-editor-content, .bitable-text-editor-content .ace-line) {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+.ccm-scope.suite-bitable .bitable-record-page-tabs {
+  font-family: var(--lqb-font) !important;
+}
+.ccm-scope.suite-bitable .bitable-record-page-tabs .ud__tabs__tab--active .bitable-item-view-edit-tab-name {
+  color: var(--lqb-ink) !important;
+  font-weight: 600 !important;
+}
+.ccm-scope.suite-bitable .bitable-record-card-content .ud__tabs__tab-bar-ink::before {
+  background-color: var(--lqb-ink) !important;
+}
+.ccm-scope.suite-bitable .bitable-record-card-content :is(code, code *, .inline-code, .inline-code *) {
+  font-family: var(--lqb-code) !important;
+  font-size: 13px !important;
+}
