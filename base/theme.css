@@ -83,6 +83,19 @@ html[data-theme="dark"] .ccm-scope.suite-bitable {
 }
 /* Native dimensions, scrolling, focus colors, field colors and Canvas fills stay native. */
 
+/* A Base embedded in a Docx uses a separate root, not .suite-bitable. */
+.bitable-block-container .embeded-bitable-container {
+  --lqb-font: "Cascadia Code", "PingFang SC", sans-serif;
+  --lqb-line: #e2e5e9;
+  font-family: var(--lqb-font) !important;
+}
+.bitable-block-container .embeded-bitable-container :is(.toolbar-title-text, .bitable-toolbar-btn__text, .bitable-view-menu-item__content__text, button, input) {
+  font-family: var(--lqb-font) !important;
+}
+.bitable-block-container .bitable-toolbar-doc-wrapper {
+  border-color: #e2e5e9;
+}
+
 /* Record details are portaled outside .bitable-main-container. */
 .ccm-scope.suite-bitable .bitable-record-card-content {
   font-family: var(--lqb-font) !important;

@@ -5,6 +5,9 @@
 .ccm-scope:has(.garr-container-docx) {
   --lqt-font: "Cascadia Code", "PingFang SC", -apple-system, "Microsoft YaHei", sans-serif;
   --lqt-nav-font: var(--lqt-font);
+  --lqt-table-font: "Avenir Next", "PingFang SC", -apple-system, sans-serif;
+  --lqt-nav-text: #656b73;
+  --lqt-nav-title: #4d545d;
   --lqt-mono: "Source Code Pro", "SFMono-Regular", Consolas, monospace;
   --lqt-paper: #ffffff;
   --lqt-ink: #242424;
@@ -33,6 +36,8 @@ html[data-theme="dark"] .ccm-scope .garr-container-docx {
   --lqt-table-head: #292c30;
   --lqt-table-head-rule: #4a4e54;
   --lqt-code-bg: #2b2e32;
+  --lqt-nav-text: #a7adb5;
+  --lqt-nav-title: #c6cbd1;
 }
 .ccm-scope .garr-container-docx .bear-web-x-container {
   background-color: var(--lqt-paper) !important;
@@ -128,7 +133,7 @@ html[data-theme="dark"] .ccm-scope .garr-container-docx {
   font-size: 13px !important;
   font-family: var(--lqt-nav-font) !important;
   font-weight: 400 !important;
-  color: var(--lqt-muted) !important;
+  color: var(--lqt-nav-text) !important;
   border-radius: 0;
   text-decoration: none !important;
 }
@@ -138,19 +143,19 @@ html[data-theme="dark"] .ccm-scope .garr-container-docx {
 }
 .ccm-scope .garr-container-docx .catalogue__list-item.heading-0 > .catalogue__item-title {
   font-size: 13px !important;
-  font-weight: 600 !important;
-  color: var(--lqt-ink) !important;
+  font-weight: 500 !important;
+  color: var(--lqt-nav-title) !important;
 }
 .ccm-scope .garr-container-docx .catalogue__list-item:is(.heading-1, .heading-2) > .catalogue__item-title {
-  font-weight: 500 !important;
-  color: var(--lqt-ink) !important;
+  font-weight: 400 !important;
+  color: var(--lqt-nav-text) !important;
 }
 .ccm-scope .garr-container-docx .catalogue__item-title:hover {
   background-color: var(--lqt-hover) !important;
 }
 .ccm-scope .garr-container-docx .catalogue__list-item.active > .catalogue__item-title {
   color: var(--lqt-accent) !important;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   background-color: transparent !important;
   box-shadow: none !important;
 }
@@ -195,8 +200,16 @@ html[data-theme="dark"] .ccm-scope .garr-container-docx {
 }
 /* Table geometry, cell backgrounds, column resizing and authored emphasis survive. */
 .ccm-scope .garr-container-docx .docx-table-block :is(.docx-text-block, .docx-bullet-block, .docx-ordered-block) .text-editor {
+  font-family: var(--lqt-table-font) !important;
   font-size: 14px !important;
-  line-height: 1.55 !important;
+  line-height: 1.62 !important;
+}
+.ccm-scope .garr-container-docx .docx-table-block :is(.docx-text-block, .docx-bullet-block, .docx-ordered-block) .ace-line {
+  font-family: var(--lqt-table-font) !important;
+}
+.ccm-scope .garr-container-docx .docx-table-block :is(.docx-bullet-block, .docx-ordered-block) {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
 }
 .ccm-scope .garr-container-docx .docx-table-block .docx-text-block > .text-block-wrapper {
   padding-top: 0;

@@ -1,4 +1,4 @@
-# Base 0.3.0
+# Base 0.4.0
 
 - 侧栏、视图标签：Cascadia Code / PingFang SC，13px；工具栏文字 12px。
 - 当前表使用灰色底、600 字重与不占布局空间的标记；当前视图增加顶部细线。
@@ -10,6 +10,8 @@ Canvas 适配范围：
 ```css
 .garr-container-bitable .faster-dom-wrapper > .faster-view canvas
 body.suite-bitable > canvas[faster="1"]
+.bitable-block-container .embeded-faster-view canvas[faster="1"]
+.sheet-block-container .embed-spreadsheet canvas.spreadsheet-canvas
 ```
 
 看板先向带标记的屏外分块画布绘制文字，再合成到可见视口，因此两类画布均需处理。无标记的其他画布保持原样。不修改 `measureText`；字体绘制结束或抛错后恢复状态。
@@ -27,3 +29,8 @@ body.suite-bitable > canvas[faster="1"]
 - 空选项、日期占位符弱化，链接 13px 并自然换行；保留状态标签色、原生控件、字段顺序与两列结构。
 - 已验证两种布局、选项菜单开关、原生文字编辑入口和 Escape 退出，测试未修改记录内容。
 - 本版仅改 CSS，Canvas 适配脚本保持不变。当前 Chrome profile 已更新，其他浏览器未同步本版本。
+
+## 0.4 嵌入式表格
+
+- 在文档页加载 Base 样式与画布字体适配，覆盖嵌入式 Base 及电子表格。
+- 实际绘制方式可能随飞书版本变化；嵌入表格的所有编辑、导出场景尚未完整验证。

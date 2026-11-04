@@ -4,10 +4,14 @@
 
 | 主题 | 当前版本 | 目录 |
 | --- | --- | --- |
-| Docs：正文、TOC、顶部导航、画板字体 | 1.4.0 | [docs](docs/) |
-| Base：网格、记录详情、看板、Timeline / 甘特图 | 0.3.0 | [base](base/) |
+| Docs：正文、TOC、顶部导航、画板字体 | 1.5.0 | [docs](docs/) |
+| Base：网格、记录详情、看板、Timeline / 甘特图 | 0.4.0 | [base](base/) |
 
 ## 安装
+
+推荐使用 [统一扩展](unified/)（1.3.0）：将 `unified/manifest.json` 中的 `your-tenant` 替换为实际租户名称，在 Chromium 浏览器的扩展管理页开启开发者模式，选择「加载已解压的扩展程序」并选中 `unified/`。扩展覆盖文档、Base 和嵌入式表格；已打开的页面需刷新。其他域名若不使用，可从清单中移除。
+
+以下为分开安装的方式，请勿与统一扩展同时启用：
 
 可以使用 Custom Style Script 扩展。两套主题分别建立规则，避免更新时相互覆盖：
 
@@ -19,7 +23,7 @@
 
 也可在支持 MV3 的 Chromium 浏览器中，通过“加载已解压的扩展程序”先将对应 `manifest.json` 中的 `your-tenant` 替换为你的实际租户子域名，再分别选择 `docs/` 或 `base/`。不要同时用两种安装方式加载同一套主题。Canvas 脚本需要在页面 MAIN world 执行。
 
-正文与导航字体为 **Cascadia Code**，中文后备为 **PingFang SC**；代码字体为 **Source Code Pro**。字体文件未包含在此仓库，需在系统中单独安装；缺失时会使用后备字体。
+正文与导航字体为 **Cascadia Code**，文档表格正文使用 **Avenir Next**；中文后备为 **PingFang SC**，代码字体为 **Source Code Pro**。字体文件未包含在此仓库，需在系统中单独安装；缺失时会使用后备字体。
 
 ## 停用与恢复
 
@@ -30,6 +34,8 @@
 不需要安装依赖，使用 Node.js：
 
 ```sh
+node unified/board-font.test.cjs
+node unified/grid-font.test.cjs
 node docs/board-font.test.cjs
 node base/grid-font.test.cjs
 ```
@@ -38,7 +44,7 @@ node base/grid-font.test.cjs
 
 ## 备份范围与限制
 
-备份日期：2026-11-01。仅包含主题源码、测试、扩展清单与可移植说明。没有上传实际文档、表格记录、页面截图、第三方飞书脚本、字体文件或浏览器个人配置。
+备份日期：2026-11-04。仅包含主题源码、测试、扩展清单与可移植说明。没有上传实际文档、表格记录、页面截图、第三方飞书脚本、字体文件或浏览器个人配置。
 
 源码依赖飞书现有 DOM 类名和 Canvas 渲染方式。升级后可能需要维护。字体替换保留原生文本测量和整段宽度，但逐字符字形位置可能不同；不能据此保证所有编辑光标、组件与浏览器完全一致。深色、移动端、嵌入式 Base、仪表盘和导出尚未完整验证。
 

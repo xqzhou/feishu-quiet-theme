@@ -4,14 +4,14 @@
  */
 (() => {
   'use strict';
-  if (!/^\/(?:base|wiki)\//.test(location.pathname)) return;
+  if (!/^\/(?:base|wiki|docx)\//.test(location.pathname)) return;
   if (typeof CanvasRenderingContext2D === 'undefined') return;
 
   const KEY = Symbol.for('feishu.quiet.base-font.v1');
   if (window[KEY]) return;
   document.documentElement?.setAttribute('data-lqb-grid-adapter', 'installed');
   const FAMILY = '"Cascadia Code", "PingFang SC", sans-serif';
-  const SELECTOR = '.garr-container-bitable .faster-dom-wrapper > .faster-view canvas, body.suite-bitable > canvas[faster="1"]';
+  const SELECTOR = '.garr-container-bitable .faster-dom-wrapper > .faster-view canvas, body.suite-bitable > canvas[faster="1"], .bitable-block-container .embeded-faster-view canvas[faster="1"], .sheet-block-container .embed-spreadsheet canvas.spreadsheet-canvas';
   const installations = [];
   const painted = new WeakSet();
   let markedDocument = false;

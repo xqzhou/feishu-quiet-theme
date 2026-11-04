@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
   "name": "Feishu Quiet Base",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Native Feishu Base record details, grid, kanban and Gantt typography.",
   "content_scripts": [
     {
       "matches": [
         "https://your-tenant.larkoffice.com/base/*",
-        "https://your-tenant.larkoffice.com/wiki/*"
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.larkoffice.com/docx/*"
       ],
       "css": [
         "theme.css"
@@ -17,7 +18,8 @@
     {
       "matches": [
         "https://your-tenant.larkoffice.com/base/*",
-        "https://your-tenant.larkoffice.com/wiki/*"
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.larkoffice.com/docx/*"
       ],
       "js": [
         "grid-font.js"

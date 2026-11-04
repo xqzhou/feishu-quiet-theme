@@ -3,10 +3,11 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 
 const attrs = new Map();
+let checkedSelector = '';
 const root = { setAttribute: (k, v) => attrs.set(k, v), removeAttribute: k => attrs.delete(k) };
 class Canvas {
   constructor(board = true) { this.board = board; this.isConnected = true; this.attrs = new Map(); }
-  matches() { return this.board; }
+  matches(selector) { checkedSelector = selector; return this.board; }
   setAttribute(k, v) { this.attrs.set(k, v); }
   removeAttribute(k) { this.attrs.delete(k); }
 }
@@ -35,7 +36,7 @@ const originalFill = Context.prototype.fillText;
 const originalMeasure = Context.prototype.measureText;
 const win = {};
 vm.runInNewContext(fs.readFileSync(__dirname + '/grid-font.js', 'utf8'), {
-  location: { pathname: '/wiki/example' }, window: win, document: {
+  location: { pathname: '/docx/example' }, window: win, document: {
     documentElement: root, querySelectorAll: () => [],
   }, HTMLCanvasElement: Canvas, CanvasRenderingContext2D: Context,
 });
@@ -52,6 +53,8 @@ assert.equal(ctx.font, oldFont);
 assert.deepEqual(ctx.transform, [1, 1, 0, 0]);
 assert.equal(Context.prototype.measureText, originalMeasure);
 assert.equal(attrs.get('data-lqb-grid-font'), 'Cascadia Code');
+assert.match(checkedSelector, /\.bitable-block-container \.embeded-faster-view canvas\[faster="1"\]/);
+assert.match(checkedSelector, /\.sheet-block-container \.embed-spreadsheet canvas\.spreadsheet-canvas/);
 
 // Native stroke, non-grid charts and actual icon runs preserve their behavior.
 ctx.strokeText('iiii', 4, 5);

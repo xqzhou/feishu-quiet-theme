@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Feishu Quiet Theme",
+  "version": "1.3.0",
+  "description": "Local typography and visual theme for Feishu Docs and Base.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://your-tenant.larkoffice.com/docx/*",
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.my.larkoffice.com/docx/*",
+        "https://your-tenant.my.larkoffice.com/wiki/*"
+      ],
+      "css": [
+        "docs.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://your-tenant.larkoffice.com/docx/*",
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.my.larkoffice.com/docx/*",
+        "https://your-tenant.my.larkoffice.com/wiki/*"
+      ],
+      "js": [
+        "board-font.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://your-tenant.larkoffice.com/base/*",
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.larkoffice.com/docx/*",
+        "https://your-tenant.my.larkoffice.com/base/*",
+        "https://your-tenant.my.larkoffice.com/wiki/*",
+        "https://your-tenant.my.larkoffice.com/docx/*"
+      ],
+      "css": [
+        "base.css"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "https://your-tenant.larkoffice.com/base/*",
+        "https://your-tenant.larkoffice.com/wiki/*",
+        "https://your-tenant.larkoffice.com/docx/*",
+        "https://your-tenant.my.larkoffice.com/base/*",
+        "https://your-tenant.my.larkoffice.com/wiki/*",
+        "https://your-tenant.my.larkoffice.com/docx/*"
+      ],
+      "js": [
+        "grid-font.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ]
+}
